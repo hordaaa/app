@@ -16,3 +16,9 @@ services:
       - "80:80"
     depends_on:
       - backend
+
+  cache:
+    image: redis
+    container_name: redis
+    ports:
+      - "6379:6379"
