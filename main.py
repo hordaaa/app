@@ -5,7 +5,7 @@ from redis import Redis
 
 app = Flask(__name__)
 
-redis_cli = Redis()
+redis_cli = Redis(host='redis', port=6379, db=0)
 
 @app.route("/")
 def index():

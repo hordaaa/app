@@ -6,7 +6,7 @@ services:
     ports:
       - "5000:5000"
     depends_on:
-      - cache
+      - redis
 
 
   web:
@@ -19,7 +19,7 @@ services:
     depends_on:
       - backend
 
-  cache:
+  redis:
     image: redis
     container_name: redis
     ports:
